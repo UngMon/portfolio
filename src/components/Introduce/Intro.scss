@@ -1,0 +1,70 @@
+$shadow: #0808080c;
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.Intro-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      height: 80px;
+      font-size: 50px;
+      letter-spacing: 1px;
+      text-shadow: $shadow 1px 1px, $shadow 3px 3px, $shadow 5px 5px,
+        $shadow 4px 4px;
+    }
+
+    .poly {
+      animation: titleAnimation 3s ease;
+    }
+
+    .Hello {
+      padding-bottom: 150px;
+      font-size: 70px;
+      animation: helloAnimation 2s linear infinite;
+    }
+  }
+}
+
+@keyframes helloAnimation {
+  0% {
+    color: white;
+  }
+  25% {
+    color: gold;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: gold;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+  }
+}

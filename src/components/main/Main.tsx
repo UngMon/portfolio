@@ -1,13 +1,15 @@
-import Intro from "./Intro";
-import "./Main.scss";
-import Projects from "./Projects";
-import Skils from "./Skils";
+import Intro from "../Introduce/Intro";
+import Projects from "../Projects/Projects";
+import Skills from "../Skill/Skills";
+import About from "../about/About";
+import './Main.scss';
 
 const Main = () => {
   return (
     <main className="Main-box">
       <Intro />
-      <Skils />
+      <About/>
+      <Skills />
       <Projects />
     </main>
   );

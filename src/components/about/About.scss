@@ -1,0 +1,81 @@
+.aboutAnimation {
+  animation: aboutAnimation 1s ease-in-out;
+}
+
+.About-box {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2em;
+    padding-bottom: 40px;
+  }
+
+  .About-Grid {
+    box-sizing: border-box;
+    padding: 0 30px;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 2fr 220px;
+    grid-template-rows: 220px 100px;
+
+    .About-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-size: 1.2em;
+        font-weight: bold;
+        word-spacing: 1px;
+      }
+    }
+
+    .About-photo {
+      grid-row-end: span 1;
+
+      img {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    .About-info {
+      grid-column-end: span 2;
+      padding: 0 5%;
+      width: 80%;
+      text-align: center;
+
+      ul {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        list-style: none;
+        height: 40px;
+
+        li {
+          width: 25%;
+          height: 100%;
+          text-align: center;
+          
+        }
+      }
+    }
+  }
+}
+
+@keyframes aboutAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

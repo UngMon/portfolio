@@ -1,12 +1,15 @@
-import "./Header.css";
+import { useNavigate } from "react-router-dom";
+import "./Header.scss";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
-      <span>{"<웅/>"}</span>
+      <span onClick={() => navigate("/")}>{"<웅/>"}</span>
       <nav>
         <ul>
-          <li>Intro</li>
+          <li>About</li>
           <li>Skills</li>
           <li>Projects</li>
         </ul>

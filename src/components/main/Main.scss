@@ -1,66 +1,52 @@
-$shadow: #0808080c;
-
 .Main-box {
-  min-height: calc(100vh - 80px);
-  color: white;
-  position: relative;
-}
-
-.Intro-box {
-  top: 200px;
   width: 100%;
-  height: 500px;
-
-  h2 {
-    display: flex;
-    flex-direction: column;
-
-    span {
-      font-size: 40px;
-      letter-spacing: 1px;
-      animation: titleAnimation 3s ease;
-      text-shadow: $shadow 1px 1px, $shadow 3px 3px, $shadow 5px 5px,
-        $shadow 4px 4px;
-    }
-  }
+  min-height: 100vh;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-@keyframes titleAnimation {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
-    clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-  }
-}
+.Projects {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding: 50px 0 50px 50px;
+  display: gird;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(2, 300px);
+  
+  .Project {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: green;
 
-
-
-.Skills-box {
-  .Skill {
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 0 0 30%;
-    display: flex;
-    justify-content: left;
-    align-items: center; 
-
-
-    h3 {
-      width: 150px;
+    .position {
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
 
-    img {
-      height: 30px;
-      margin-right: 10px;
+    .pr-title {
+      position: absolute;
+      top: calc(50% - 20px);
+      width: 100%;
+      text-align: center;
     }
 
+    .start-date {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .one {
+      left: 0;
+    }
+
+    .two {
+      grid-column-end: span 2;
+    }
   }
 }
