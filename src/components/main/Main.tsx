@@ -9,7 +9,7 @@ const Main = () => {
     <main className="Main-box">
       <Intro />
       <About/>
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
     </main>
   );

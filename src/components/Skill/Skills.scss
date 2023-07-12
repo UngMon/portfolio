@@ -1,6 +1,9 @@
 .Skills-box {
+  height: 800px;
+
   .Skill-title {
-    font-size: 24px;
+    font-size: 2em;
+    margin: 100px 0 40px;
   }
 
   p {
@@ -10,18 +13,34 @@
 
   .Skills {
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
 
     div {
-      min-width: 20%;
-      height: 300px;
+      width: 100px;
+      height: 100px;
       background-color: rgb(251, 251, 251);
-      border-radius: 10px;
-
+      // border-radius: 10px;
+      transform: translate(500px, 100px);
+      transition: all 1s linear;
       h3 {
         padding: 10px 0;
         color: #333;
       }
     }
+
+    .MarkUp {
+      // transform: translate(500px, 100px);
+      // transition: all 0.2s linear;
+    }
+
+    .Language {
+      transform: translate(300px, -150px);
+    }
   }
+}
+
+.fix {
+  position: static;
 }
