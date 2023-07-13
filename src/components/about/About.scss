@@ -16,14 +16,13 @@ $pc: 1300px;
   h2 {
     font-size: 2em;
     padding-bottom: 40px;
+    z-index: 10;
   }
 
   .About-Grid {
     box-sizing: border-box;
     margin: 0 auto;
-    // display: grid;
-    // grid-template-columns: 300px 200px;
-    // grid-template-rows: auto auto;
+    z-index: 10;
 
     p {
       font-size: 1.2em;

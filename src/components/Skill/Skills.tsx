@@ -6,8 +6,6 @@ const Skills = () => {
 
   useEffect(() => {
     const scrollHandler = () => {
-      console.log(window.scrollY);
-      console.log(`scroll ${scrollY}`)
      if (window.scrollY <= 1950) setScrollY(window.scrollY);
     };
 
@@ -22,8 +20,8 @@ const Skills = () => {
         <div
           className="MarkUp"
           style={{
-            transform: `translate(${400 - (1900 - scrollY) / 2}px, ${
-              100 - (1900 - scrollY) / 2
+            transform: `translate(${200 - (1900 - scrollY) / 2}px, ${
+              20 - (1900 - scrollY) / 2
             }px)`,
           }}
         >
@@ -32,8 +30,8 @@ const Skills = () => {
         <div
           className="Language"
           style={{
-            transform: `translate(${700 + (1900 - scrollY) / 2}px, ${
-              100 - (1900 - scrollY) / 2
+            transform: `translate(${800 + (1900 - scrollY) / 2}px, ${
+              20 - (1900 - scrollY) / 2
             }px)`,
           }}
         >
@@ -42,7 +40,7 @@ const Skills = () => {
         <div
           className="Library"
           style={{
-            transform: `translate(${250 + (1900 - scrollY) / 2}px, ${
+            transform: `translate(${100 - (1900 - scrollY) / 2}px, ${
               400 + (1900 - scrollY) / 2
             }px)`,
           }}
@@ -52,8 +50,8 @@ const Skills = () => {
         <div
           className="DB"
           style={{
-            transform: `translate(${500 + (1900 - scrollY) / 2}px, ${
-              400 + (1900 - scrollY) / 2
+            transform: `translate(${800 + (1900 - scrollY) / 2}px, ${
+              500 + (1900 - scrollY) / 2
             }px)`,
           }}
         >

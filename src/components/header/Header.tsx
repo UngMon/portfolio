@@ -5,7 +5,12 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        backgroundColor: `${window.scrollY > 2000 ? "#0a192f" : "transparent"}`,
+      }}
+    >
       <span onClick={() => navigate("/")}>{"<웅/>"}</span>
       <nav>
         <ul>

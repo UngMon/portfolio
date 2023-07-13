@@ -6,6 +6,7 @@ const Projects = () => {
 
   return (
     <div className="Projects">
+      <h3>My Projects</h3>
       <div className="Project" onClick={() => navigate("/projects/your-calender")}>
         <div className="position">Front-end</div>
         <div className="pr-title">Your Calender</div>
