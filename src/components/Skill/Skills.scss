@@ -1,9 +1,21 @@
+@keyframes skil-animae {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .Skills-box {
-  height: 800px;
+  margin-top: 100px;
+  padding-bottom: 50px;
 
   .Skill-title {
     font-size: 2em;
-    margin: 100px 0 40px;
+    margin-bottom: 80px;
   }
 
   p {
@@ -12,29 +24,72 @@
   }
 
   .Skills {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 30px;
     height: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+    overflow: hidden;
     position: relative;
 
-    div {
-      width: 300px;
+    li {
+      // border-radius: 10px;
+      // color: green;
+      // border: 3px solid green;
+      display: block;
       height: 300px;
-      background-color: rgb(251, 251, 251);
-      position: absolute;
-      transform: translate(500px, 100px);
-      transition: all .2s linear;
-      left: calc();
+      background-color: #112240;
+      text-align: left;
+      // width: 300px;
+      // height: 300px;
+      // background-color: rgb(251, 251, 251);
+      // position: absolute;
+      // transform: translate(500px, 100px);
+      // transition: all 0.2s linear;
+      // left: calc();
 
-      h3 {
-        padding: 10px 0;
-        color: #333;
+      div {
+        box-sizing: border-box;
+        padding: 30px 25px 10px;
+        height: 100%;
+
+        h3 {
+          padding-bottom: 30px;
+        }
+
+        p {
+          letter-spacing: 1px;
+        }
       }
-    }    
+
+     
+    }
   }
+}
+
+.s-a {
+  animation: skil-animae 1.3s ease-in-out forwards;
 }
 
 .fix {
   position: static;
+}
+
+@media (max-width: 680px) {
+  .Skills-box {
+    .Skills {
+      margin: 0 auto;
+      min-width: 300px;
+      width: 70%;
+      display: block;
+
+      li {
+        margin-bottom: 50px;
+      }
+    }
+  }
 }

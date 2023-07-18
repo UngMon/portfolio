@@ -4,7 +4,6 @@ header {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 80px;
   display: flex;
@@ -15,6 +14,7 @@ header {
   color: orange;
   z-index: 99;
   animation: HeaderAni 2s ease-out;
+  background-color: rgba(10, 25, 47, 0.85);
 
   span {
     font-size: 1.5em;
