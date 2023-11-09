@@ -8,58 +8,94 @@
   }
 }
 
-.Projects {
-  margin-top: 150px;
-  min-height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  h3 {
-    position: absolute;
-    top: 20px;
-    font-size: 2.5rem;
+@keyframes card-animae {
+  0% {
+    transform: scale(0.8);
   }
 
-  .Project {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 20px;
-
-    .position {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-
-    .pr-title {
-      position: absolute;
-      top: calc(50% - 20px);
-      width: 100%;
-      text-align: center;
-    }
-
-    .start-date {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-    }
+  70% {
+    transform: scaleY(1);
+    filter: brightness(0.4);
   }
 
-
-  .Project:nth-of-type(1) {
-    background-color: purple;
-  }
-
-  .Project:nth-of-type(2) {
-    background-color: orange;
-  }
-
-  .Project:nth-of-type(3) {
-    background-color: rgb(60, 15, 193);
+  100% {
+    transform: scaleY(1.2);
+    filter: brightness(1);
   }
 }
 
+.Project {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
 
+  // background-color: blueviolet;
+
+  h3 {
+    padding: 0 0 50px;
+    font-size: 2.5em;
+    line-height: 100px;
+  }
+
+  .Project-Content {
+    margin: 0 auto;
+    width: 960px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    .Project-item {
+      width: 100%;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 10;
+
+      .pr-info {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        opacity: 0;
+        text-align: left;
+        color: white;
+
+        h4 {
+          position: absolute;
+          bottom: 100px;
+          left: 20px;
+        }
+
+        p {
+          position: absolute;
+          bottom: 70px;
+          left: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+
+    .Project-item:hover {
+      cursor: pointer;
+
+      .pr-info {
+        opacity: 0.9;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.1) 10%,
+          rgba(0, 0, 0, 0.78) 80%
+        );
+      }
+    }
+  }
+}

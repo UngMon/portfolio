@@ -4,6 +4,7 @@ import "./Skills.scss";
 const Skills = () => {
   // const [scrollY, setScrollY] = useState<number>(0);
   const [activeTwo, setActiveTwo] = useState<boolean>(false);
+  const [flip, setFlip] = useState<boolean[]>([false, false, false, false]);
   const boxRef = useRef<HTMLDivElement>(null);
   // console.log(`activTwo ${activeTwo}`);
   useEffect(() => {
@@ -41,6 +42,10 @@ const Skills = () => {
   //   return () => window.removeEventListener("scroll", scrollHandler);
   // });
 
+  const flipClickHandler = () => {
+    setFlip([!flip[0], false, false, false]);
+  };
+
   return (
     <section
       className={`Skills-box ${activeTwo ? "s-a" : ""}`}
@@ -51,19 +56,23 @@ const Skills = () => {
     >
       <h2 className="Skill-title">My Skills</h2>
       <ul className="Skills">
-        <li className="MarkUp">
+        <li
+          className={`MarkUp ${!flip[0] ? 'front' : 'back'}`}
+          // style={{ transform: `${flip[0] ? 'rotateY(80deg)' : ''}` }}
+        >
           <div>
             <h3>MarkUp</h3>
+            <img src="/images/html.svg" alt="html" width="56"></img>
+            <img src="/images/css3.svg" alt="css" width="40"></img>
             <p>
               웹 표준을 신경쓰면서 Tag를 작성하고 있습니다. scss를 활용할 수
               있습니다. keyframs와 media를 활용하여 재미있는 반응형 웹 사이트를
               만들 수 있습니다.
             </p>
-            <img></img>
-            <img></img>
+            <button onClick={flipClickHandler}>click</button>
           </div>
         </li>
-        <li className="Languag">
+        <li className="Language">
           <div>
             <h3>Language</h3>
             <p>
@@ -84,7 +93,7 @@ const Skills = () => {
               Router로 다양한 Url을 가지는 SPA를 만들 수 있습니다. Redux로
               다양한 State를 관리할 수 있습니다.
             </p>
-            <img></img>
+            <img src="images/react.png" alt="react" width="60"></img>
             <img></img>
           </div>
         </li>

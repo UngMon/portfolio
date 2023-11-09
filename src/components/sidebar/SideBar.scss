@@ -1,0 +1,63 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+  right: 50px;
+  top: calc(50% - 95px);
+  position: fixed;
+  width: 40px;
+
+  .bar-lis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 10px;
+    height: 30px;
+
+    button {
+      position: absolute;
+      top: 12px !important;
+      width: 8px;
+      height: 8px;
+      border: 0;
+      background-color: rgb(234, 234, 234);
+      transform: rotateZ(45deg);
+    }
+
+    span {
+      position: absolute;
+      top: 5px !important;
+      right: 25px !important;
+      width: auto;
+      height: 15px;
+      color: white;
+      font-weight: bold;
+      opacity: 0;
+    }
+
+    .bar-clicked {
+        transform: rotate(0);
+        width: 12px;
+        height: 12px;
+        background-color: transparent;
+        border: 2px solid white;
+        transition: all 0.3s ease-in-out;
+        top: 10px !important;
+      }
+
+    button:hover {
+      cursor: pointer;
+    }
+    //////
+  }
+  .bar-lis:hover {
+    span {
+      opacity: 1;
+    }
+  }
+  //////////
+}
+
+

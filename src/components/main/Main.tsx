@@ -4,6 +4,7 @@ import Projects from "../Projects/Projects";
 import Skills from "../Skill/Skills";
 import About from "../about/About";
 import "./Main.scss";
+import Contact from "../contact/Contact";
 
 const Main = () => {
   const [viewWidth, setViewWidth] = useState<number>(window.innerWidth);
@@ -89,6 +90,7 @@ const Main = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </main>
   );
 };

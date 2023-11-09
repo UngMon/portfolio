@@ -10,7 +10,7 @@
 
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
 }
 
 /* 스크롤바의 track 색상 */
@@ -22,4 +22,8 @@
 ::-webkit-scrollbar-thumb {
   background-color: #1965fe;
   border-radius: 5px;
+}
+
+li {
+  list-style: none;
 }

@@ -9,7 +9,6 @@ a {
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  // justify-content: center;
   height: 100vh;
   background-color: white;
   color: #0a192f;
@@ -33,9 +32,9 @@ a {
         font-size: 120px;
       }
 
-      // .poly {
-      //   animation: titleAnimation 3s ease infinite;
-      // }
+      .poly {
+        animation: titleAnimation 3s ease infinite;
+      }
 
       .Hello {
         text-shadow: $shadow 1px 1px, $shadow 3px 3px, $shadow 5px 5px,
