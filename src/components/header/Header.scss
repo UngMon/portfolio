@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Hi+Melody&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,300&display=swap');
+$text-color: #ffffff;
 
 header {
   box-sizing: border-box;
@@ -11,45 +13,71 @@ header {
   padding: 0 2%;
   font-size: 18px;
   font-weight: 600;
-  color: orange;
+  color: $text-color;
   z-index: 99;
-  animation: HeaderAni 2s ease-out;
-  background-color: rgba(10, 25, 47, 0.0);
+
+  // animation: HeaderAni 2s ease-out;
+  background-color: rgba(10, 25, 47, 0);
 
   span {
     font-size: 1.5em;
     width: 100px;
     height: 100%;
     line-height: 80px;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Tourney', "Gamja Flower", cursive, sans-serif;
   }
 
   nav {
-
     ul {
       display: flex;
       justify-content: space-evenly;
 
       li {
+        position: relative;
         width: 100px;
-        list-style: none;
-        text-decoration: none;
         text-align: center;
         font-size: 1em;
         line-height: 80px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          width: 0;
+          height: 1px;
+          background: white;
+          transition-property: width, left;
+          transition-duration: 0.2s;
+          transition-timing-function: ease-out;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover::after {
+          left: 0;
+          width: 100%;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
 }
 
-@keyframes HeaderAni {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
+// @keyframes HeaderAni {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-50px);
+//   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }

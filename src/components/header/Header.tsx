@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
@@ -6,13 +6,18 @@ const Header = () => {
 
   return (
     <header className="header">
-      <span onClick={() => navigate("/")}>{"<웅/>"}</span>
+      <span onClick={() => navigate("/")}>UngMon</span>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/project">Projects</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
         </ul>
       </nav>
     </header>

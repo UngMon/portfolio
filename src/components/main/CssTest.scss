@@ -1,0 +1,76 @@
+@import "https://fonts.googleapis.com/css?family=Baloo+Paaji";
+
+$primary-color: #1e90ff;
+$secondary-color: #ffe221;
+$tertiary-color: #ffffff;
+
+.container {
+  position: relative;
+  background-color: $primary-color;
+  z-index: 150;
+
+  h1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 500px;
+    height: 500px;
+    font-size: 75px;
+    text-transform: uppercase;
+    color: $tertiary-color;
+
+    span {
+      width: 100%;
+      float: left;
+      color: $tertiary-color;
+      -webkit-clip-path: polygon(50% 50%, 100% 0%, 50% 50%, 0% 100%);
+      clip-path: polygon(50% 50%, 100% 0%, 50% 50%, 0% 100%);
+      transform: translateY(-50px);
+      opacity: 0;
+      animation-name: titleAnimation;
+      animation-timing-function: ease;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+  }
+  //   h1 span {
+  //     animation-delay: 0.6s;
+  //     //   -webkit-animation-fill-mode: forwards;
+
+  //     &:first-child {
+  //       animation-delay: 0.7s;
+  //     }
+
+  //     &:last-child {
+  //       color: $secondary-color;
+  //       animation-delay: 0.5s;
+  //     }
+  //   }
+
+  h2 {
+    top: 0;
+    position: absolute;
+
+    span {
+      animation-delay: 4.1s;
+      // -webkit-animation-fill-mode: forwards;
+
+      &:first-child {
+        animation-delay: 4.2s;
+      }
+
+      &:last-child {
+        color: $secondary-color;
+        animation-delay: 4s;
+      }
+    }
+  }
+}
+
+@keyframes titleAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

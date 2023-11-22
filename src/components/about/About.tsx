@@ -1,7 +1,7 @@
-import "./About.scss";
 import { useEffect, useRef } from "react";
 import AboutInfo from "./AboutInfo";
 import AboutIntroduce from "./AboutIntroduce";
+import "./About.scss";
 
 const About = () => {
   const aboutRef = useRef<HTMLDivElement>(null);

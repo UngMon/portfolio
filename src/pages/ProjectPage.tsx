@@ -1,11 +1,9 @@
-import Projects from "../components/Projects/Projects";
+import { useParams } from "react-router-dom";
+import YourCalender from "../components/Projects/YourClaender";
 
 const ProjectPage = () => {
-  return (
-    <>
-      <Projects />
-    </>
-  );
+  const param = useParams();
+  return <>{param.name === "Your-Calender" && <YourCalender />}</>;
 };
 
 export default ProjectPage;

@@ -32,8 +32,6 @@
   display: flex;
   flex-direction: column;
 
-  // background-color: blueviolet;
-
   h3 {
     padding: 0 0 50px;
     font-size: 2.5em;
@@ -50,11 +48,21 @@
     row-gap: 30px;
 
     .Project-item {
-      width: 100%;
       position: relative;
+      width: 100%;
       border-radius: 10px;
-      overflow: hidden;
-      z-index: 10;
+
+      &:nth-child(1) {
+        background-color: beige;
+      }
+
+      &:nth-child(2) {
+        background-color: purple;
+      }
+
+      &:nth-child(3) {
+        background-color: burlywood;
+      }
 
       .pr-info {
         position: absolute;
@@ -84,6 +92,30 @@
         height: 100%;
         z-index: 10;
       }
+
+      .expand {
+        position: absolute;
+        width: 100vw;
+        height: 100vw;
+        top: -40vw;
+        left: -40vw;
+        border-radius: 50%;
+        z-index: 50;
+        transition: all 0.5s linear;
+        transform: scale(3, 3);
+      }
+
+      .contraction {
+        position: absolute;
+        width: 100vw;
+        height: 100vw;
+        top: -40vw;
+        left: -40vw;
+        border-radius: 50%;
+        z-index: 50;
+        transition: all 0.5s linear;
+        transform: scale(0, 0);
+      }
     }
 
     .Project-item:hover {
@@ -97,5 +129,17 @@
         );
       }
     }
+  }
+
+  .bazzle {
+    background-color: rgb(44, 44, 150);
+  }
+
+  .purple {
+    background-color: purple;
+  }
+
+  .yellow {
+    background-color: yellow;
   }
 }

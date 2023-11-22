@@ -1,0 +1,49 @@
+.project-box {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  background-color: rgb(242, 242, 242);
+  max-width: 750px;
+  margin: 40px auto 0;
+  text-align: left;
+  transform: translateY(100px);
+  transition: all 0.7s linear;
+
+  h2 {
+    font-size: 40px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  h3 {
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .project-slide {
+    margin: 30px auto 0;
+    width: 70%;
+    min-width: 690px;
+    height: 400px;
+    background-color: pink;
+  }
+
+  section {
+    padding: 50px 0 0;
+    width: 100%;
+
+    p {
+      width: 100%;
+      height: auto;
+      padding: 20px 5px;
+      font-size: 18px;
+      font-weight: 550;
+    }
+  }
+}
+
+.on {
+  transform: translateY(0);
+  transition: all 0.7s linear;
+}
