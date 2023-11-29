@@ -10,24 +10,24 @@ header {
   height: 80px;
   display: flex;
   justify-content: space-between;
-  padding: 0 2%;
+  padding: 0;
   font-size: 18px;
   font-weight: 600;
   color: $text-color;
   z-index: 99;
-
-  // animation: HeaderAni 2s ease-out;
   background-color: rgba(10, 25, 47, 0);
 
   span {
+    padding-left: 10%;
     font-size: 1.5em;
-    width: 100px;
     height: 100%;
     line-height: 80px;
     font-family: 'Tourney', "Gamja Flower", cursive, sans-serif;
   }
 
   nav {
+    padding-right: 10%;
+
     ul {
       display: flex;
       justify-content: space-evenly;
@@ -37,12 +37,13 @@ header {
         width: 100px;
         text-align: center;
         font-size: 1em;
+        height: 40px;
         line-height: 80px;
 
         &::after {
           content: "";
           position: absolute;
-          bottom: 0px;
+          bottom: -20px;
           left: 50%;
           width: 0;
           height: 1px;
